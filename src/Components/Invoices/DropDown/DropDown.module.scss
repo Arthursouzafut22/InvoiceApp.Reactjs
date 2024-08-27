@@ -1,0 +1,100 @@
+@mixin flexItems($opitions, $flexx-direction) {
+  display: flex;
+  align-items: center;
+  justify-content: $opitions;
+  flex-direction: $flexx-direction;
+}
+
+.wrapperr {
+  position: relative;
+
+  button {
+    @include flexItems(start, row);
+    font-size: 15px;
+    font-weight: 700;
+    gap: 8px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .rotate {
+      animation: rotateItem 0.3s forwards;
+    }
+    .Notate {
+      animation: noRotate 0.3s forwards;
+    }
+  }
+
+  .menu {
+    @include flexItems(center, column);
+    background: #252945;
+    padding: 10px;
+    position: absolute;
+    bottom: -770%;
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+
+    label {
+      @include flexItems(start, row);
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      position: relative;
+      width: 100%;
+
+      .customCheckbox {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 17px;
+        height: 17px;
+        background-color: #1e2139;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+
+        &:hover {
+          border: 1px solid #7c5dfa;
+        }
+
+        &:checked {
+          background-color: #7c5dfa;
+        }
+
+        &:checked::before {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 5.5px;
+          width: 5px;
+          height: 10px;
+          border: solid white;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotateItem {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes noRotate {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

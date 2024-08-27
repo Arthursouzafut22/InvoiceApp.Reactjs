@@ -1,0 +1,47 @@
+$colorBar: #1e2139;
+
+@mixin flexItems() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.SideBar {
+  background: $colorBar;
+
+  nav {
+    @include flexItems();
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+
+    img {
+      display: block;
+      max-width: 60px;
+    }
+
+    .wrapper {
+      @include flexItems();
+      box-sizing: border-box;
+      padding: 20px 10px;
+      width: 110px;
+      position: relative;
+
+      .separator {
+        position: absolute;
+        width: 0.3px;
+        right: 54%;
+        height: 90px;
+        background-color: #858bb2;
+        transform: translateX(50%);
+      }
+
+      img {
+        display: block;
+        max-width: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}

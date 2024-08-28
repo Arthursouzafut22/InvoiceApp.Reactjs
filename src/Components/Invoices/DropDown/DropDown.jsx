@@ -37,7 +37,7 @@ const DropDown = () => {
           <div className={styles.menu}>
             {inputs.length > 0 &&
               inputs.map(({ label, type, name }) => (
-                <label htmlFor={label}>
+                <label htmlFor={label} key={label}>
                   <input
                     type={type}
                     name={name}

@@ -1,0 +1,90 @@
+@mixin flexItems($options) {
+  display: flex;
+  align-items: center;
+  justify-content: $options;
+}
+
+@mixin styleItem() {
+  font-size: 13px;
+  font-weight: 300;
+  color: #dfe3fa;
+}
+
+.item {
+  @include flexItems(space-between);
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1e2139;
+  padding: 18px 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  transition: outline 0.4s ease;
+
+  &:hover {
+    outline: 1px solid #7c5dfa;
+  }
+
+  .itemON {
+    @include flexItems(initial);
+    gap: 20px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    & :first-child {
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+    }
+
+    & :nth-child(2) {
+      @include styleItem();
+    }
+
+    & :nth-child(3) {
+      @include styleItem();
+    }
+  }
+
+  .itemTho {
+    @include flexItems(initial);
+    gap: 15px;
+
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-content: start;
+      gap: 5px;
+
+      & :first-child {
+        align-self: end;
+        margin-bottom: 3px;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+
+    & :first-child {
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    span {
+      @include flexItems(center);
+      text-align: center;
+      font-size: 14px;
+      width: 100px;
+      padding: 10px 0px;
+      border-radius: 8px;
+      gap: 5px;
+    }
+  }
+}

@@ -11,9 +11,9 @@ $colorBar: #1e2139;
 
   nav {
     @include flexItems();
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 15px;
 
     img {
       display: block;

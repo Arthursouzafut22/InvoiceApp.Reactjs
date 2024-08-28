@@ -1,11 +1,14 @@
 import SideBar from "./Components/Sidebar/Sidebar";
-import Main from "../src/Components/Main/Main";
+import GlobalPayment from "../src/Hooks/UseContextPayment";
+import Globalrouting from "./Routes";
 
 const App = () => {
   return (
     <>
-      <SideBar />
-      <Main/>
+      <GlobalPayment>
+        <SideBar />
+        <Globalrouting />
+      </GlobalPayment>
     </>
   );
 };

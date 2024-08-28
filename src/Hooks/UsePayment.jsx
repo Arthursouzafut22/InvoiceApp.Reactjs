@@ -1,13 +1,11 @@
 import { useQuery } from "react-query";
-import axios from "axios";
 
-const UsePayment = () => {
-  const paymentDados = async () => {
-    const response = await axios.get("dados.json");
-    if (!response.ok) throw new Error("Erro em chamada!");
-    return response?.data;
-  };
+const paymentDados = async () => {
+  const response = await fetch("dados.json");
+  return response.json();
+};
 
+export const useResquestAxiosGet = () => {
   const query = useQuery({
     queryFn: paymentDados,
     queryKey: ["pay-dados"],
@@ -15,5 +13,3 @@ const UsePayment = () => {
 
   return query;
 };
-
-export default UsePayment;

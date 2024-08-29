@@ -13,9 +13,8 @@ const statusColor = {
   },
 };
 
-const { green, orange, white } = statusColor;
-
 export const statusPayment = (item) => {
+  const { green, orange, white } = statusColor;
   return item?.status === "paid"
     ? green
     : item?.status === "pending"
@@ -26,6 +25,5 @@ export const statusPayment = (item) => {
 };
 
 export const transformData = (date) => {
-  const dateForm = new Date(date);
-  return dateForm.toString().slice(0, -46);
+  return new Date(date).toString().slice(0, -46);
 };

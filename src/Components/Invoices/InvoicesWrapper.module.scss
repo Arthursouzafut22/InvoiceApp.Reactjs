@@ -1,34 +1,47 @@
-.wrapper {
+@mixin flexItens($options) {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: $options;
+}
+
+.wrapper {
+  @include flexItens(space-between);
   margin-bottom: 20px;
 
   h1 {
-    font-size: 32px;
+    font-size: clamp(1.38rem, 4vw, 2rem);
   }
 
   p {
-    font-size: 13px;
+    font-size: 0.81rem;
     color: #dfe3fa;
   }
 
   .wrapper2 {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+    @include flexItens(initial);
+    gap: 1.88rem;
+
+    @media screen and (max-width: 567px) {
+      gap: 1.25rem;
+    }
 
     .button {
-      font-size: 15px;
+      font-size: 0.94rem;
+      font-weight: 700;
       color: #ffffff;
       background: #7c5dfa;
-      padding: 10px;
-      gap: 8px;
-      display: flex;
-      align-items: center;
+      padding: 0.625rem;
+      @include flexItens(initial);
+      gap: 0.5rem;
       border: none;
-      border-radius: 25px;
+      border-radius: 1.5625rem;
       cursor: pointer;
+
+      @media screen and (max-width: 481px) {
+        span {
+          display: none;
+        }
+      }
     }
   }
 }

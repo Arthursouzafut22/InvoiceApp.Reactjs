@@ -5,7 +5,7 @@
 }
 
 @mixin styleItem() {
-  font-size: 13px;
+  font-size: 0.81rem;
   font-weight: 300;
   color: #dfe3fa;
 }
@@ -15,10 +15,10 @@
   text-decoration: none;
   color: #ffffff;
   background-color: #1e2139;
-  padding: 18px 15px;
+  padding: 1.125rem 0.9375rem;
   margin-bottom: 15px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   box-sizing: border-box;
   cursor: pointer;
   outline: 1px solid transparent;
@@ -30,15 +30,15 @@
 
   .itemON {
     @include flexItems(initial);
-    gap: 20px;
+    gap: 1.25rem;
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
-      gap: 5px;
+      gap: 0.3125rem;
     }
 
     & :first-child {
-      font-size: 15px;
+      font-size: 0.9375rem;
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -55,12 +55,12 @@
 
   .itemTho {
     @include flexItems(initial);
-    gap: 15px;
+    gap: 0.9375rem;
 
     @media screen and (max-width: 767px) {
       flex-direction: column;
       align-content: start;
-      gap: 5px;
+      gap: 0.3125rem;
 
       & :first-child {
         align-self: end;
@@ -73,18 +73,18 @@
     }
 
     & :first-child {
-      font-size: 17px;
+      font-size: 1.06rem;
       font-weight: 700;
     }
 
     span {
       @include flexItems(center);
       text-align: center;
-      font-size: 14px;
+      font-size: 0.875rem;
       width: 100px;
-      padding: 10px 0px;
-      border-radius: 8px;
-      gap: 5px;
+      padding: 0.625rem 0;
+      border-radius: 0.5rem;
+      gap: 0.3125rem;
     }
   }
 }

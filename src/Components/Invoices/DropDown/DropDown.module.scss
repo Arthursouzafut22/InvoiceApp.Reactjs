@@ -10,13 +10,19 @@
 
   button {
     @include flexItems(start, row);
-    font-size: 15px;
+    font-size: clamp(0.75rem, 4vw, 0.9375rem);
     font-weight: 700;
-    gap: 8px;
+    gap: 0.3125rem;
     color: #ffffff;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media screen and (max-width: 567px) {
+      span {
+        display: none;
+      }
+    }
 
     .rotate {
       animation: rotateItem 0.3s forwards;
@@ -29,19 +35,21 @@
   .menu {
     @include flexItems(center, column);
     background: #252945;
-    padding: 10px;
     position: absolute;
-    bottom: -770%;
-    max-width: 200px;
-    width: 100%;
+    width: 12rem;
     margin: 0 auto;
-    border-radius: 6px;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    z-index: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -9rem;
 
     label {
       @include flexItems(start, row);
-      gap: 10px;
+      gap: 0.625rem;
       margin-bottom: 10px;
-      font-size: 15px;
+      font-size: 0.9375rem;
       position: relative;
       width: 100%;
 

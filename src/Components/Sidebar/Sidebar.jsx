@@ -12,7 +12,11 @@ const SideBar = () => {
           <img src={logo} alt="Logo" />
           <div className={styles.wrapper}>
             <FaSun
-              style={{ color: "#858BB2", fontSize: "22px", cursor: "pointer" }}
+              style={{
+                color: "#858BB2",
+                fontSize: "1.38rem",
+                cursor: "pointer",
+              }}
             />
             <div className={styles.separator}></div>
 

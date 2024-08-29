@@ -22,7 +22,7 @@ const IvoiceItem = () => {
           >
             <div className={styles.itemON}>
               <p>
-                <FaHashtag style={{ color: "#7E88C3", fontSize: "13px" }} />{" "}
+                <FaHashtag style={{ color: "#7E88C3", fontSize: "0.81rem" }} />{" "}
                 {item?.id}
               </p>
               <p>{transformData(item?.paymentDue)}</p>
@@ -31,13 +31,13 @@ const IvoiceItem = () => {
             <div className={styles.itemTho}>
               <p>{FormatePrice(item.total)}</p>
               <span style={statusPayment(item)}>
-                <FaCircle style={{ fontSize: "8px" }} />
+                <FaCircle style={{ fontSize: "0.50rem" }} />
                 {item?.status}
               </span>
               <IoIosArrowForward
                 style={{
                   color: "#7C5DFA",
-                  fontSize: "18px",
+                  fontSize: "1.13rem",
                   fontWeight: "600",
                 }}
               />

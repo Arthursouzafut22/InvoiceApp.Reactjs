@@ -9,10 +9,10 @@ const InvoicesWrapper = () => {
         <p>Há um total de 7 faturas.</p>
       </div>
       <div className={styles.wrapper2}>
-        <DropDown className={styles.dropdown} />
+        <DropDown />
         <button className={styles.button}>
-          <FaCirclePlus style={{ fontSize: "30px" }} />
-          Nova fatura
+          <FaCirclePlus style={{ fontSize: "1.88rem" }} />
+          Nova <span>fatura</span>
         </button>
       </div>
     </div>

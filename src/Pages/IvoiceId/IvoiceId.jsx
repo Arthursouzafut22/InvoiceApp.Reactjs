@@ -1,10 +1,13 @@
 import styles from "../IvoiceId/IvoiceId.module.scss";
+import { FaAngleLeft } from "react-icons/fa";
 import { FaCircle } from "react-icons/fa";
 import { ContextPayment } from "../../Hooks/UseContextPayment";
 import Button from "../../Components/Button/Button";
+import IvoiceIdTwo from "./IvoiceIdTwo";
 import { statusPayment } from "../../Components/StatusInvoice/StatusInvoice";
 import { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const IvoiceId = () => {
   const { id } = useParams();
@@ -25,6 +28,12 @@ const IvoiceId = () => {
   return (
     <>
       <section className={styles.section}>
+        <div className={styles.backButton}>
+          <Link to="/">
+            <FaAngleLeft style={{ color: "#7C5DFA" }} />
+            Go back
+          </Link>
+        </div>
         <div className={styles.waperrOn}>
           <div className={styles.contStatus}>
             <p>Status</p>
@@ -38,6 +47,7 @@ const IvoiceId = () => {
             <Button>Excluir</Button>
           </div>
         </div>
+        <IvoiceIdTwo item={itemsSearch} />
       </section>
     </>
   );

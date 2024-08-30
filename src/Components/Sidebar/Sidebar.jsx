@@ -10,6 +10,7 @@ const SideBar = () => {
       <header className={styles.SideBar}>
         <nav>
           <img src={logo} alt="Logo" />
+
           <div className={styles.wrapper}>
             <FaSun
               style={{

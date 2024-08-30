@@ -1,70 +1,272 @@
+$whiteColorOn: #ffffff;
+$whiteColorTwo: #dfe3fa;
+
+@mixin flexCenter($options) {
+  display: flex;
+  align-items: center;
+  justify-content: $options;
+}
+
 .section {
-  max-width: 1000px;
+  max-width: 62.5rem;
   margin: 20px auto auto auto;
-  padding: 15px;
+  padding: 0.9375rem;
+
+  .backButton {
+    max-width: 50rem;
+    margin: 0 auto 20px auto;
+
+    a {
+      font-size: 0.88rem;
+      color: $whiteColorOn;
+      text-decoration: none;
+      @include flexCenter(initial);
+      gap: 5px;
+      max-width: 7.5rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: #888eb0;
+      }
+    }
+  }
 
   .waperrOn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #ffffff;
+    @include flexCenter(space-between);
+    color: $whiteColorOn;
     background: #1e2139;
-    padding: 25px 15px;
-    max-width: 800px;
+    padding: 1.56rem 0.94rem;
+    max-width: 50rem;
     margin: 0 auto;
-    border-radius: 10px;
+    border-radius: 0.63rem;
 
     .contStatus {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      @include flexCenter(initial);
+      gap: 0.75rem;
 
       p {
-        font-size: 13px;
+        font-size: 0.81rem;
         font-weight: 300;
-        color: #dfe3fa;
+        color: $whiteColorTwo;
       }
 
       span {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
+        @include flexCenter(center);
+        gap: 0.31rem;
         text-align: center;
-        font-size: 14px;
-        width: 100px;
-        padding: 10px 0px;
-        border-radius: 8px;
+        font-size: 0.88rem;
+        width: 6.25rem;
+        padding: 0.63rem 0;
+        border-radius: 0.5rem;
+
+        @media screen and (max-width: 390px) {
+          width: 5rem;
+        }
       }
     }
 
     .wrapperButton {
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      @include flexCenter(initial);
+      gap: 0.75rem;
 
       & :first-child {
-        font-size: 15px;
         font-weight: 600;
-        color: #ffffff;
+        color: $whiteColorTwo;
         background-color: #252945;
         display: block;
-        padding: 12px 16px;
+        padding: 0.75rem 1rem;
         cursor: pointer;
-        border-radius: 22px;
+        border-radius: 1.38rem;
         border: none;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: $whiteColorOn;
+        }
       }
 
       & :last-child {
-        font-size: 15px;
         font-weight: 600;
-        color: #ffffff;
+        color: $whiteColorOn;
         background-color: #ec5757;
         display: block;
-        padding: 12px 16px;
+        padding: 0.75rem 1rem;
         cursor: pointer;
-        border-radius: 22px;
+        border-radius: 1.38rem;
         border: none;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: #ff9797;
+        }
+      }
+    }
+  }
+
+  .info {
+    max-width: 50rem;
+    margin: 20px auto auto;
+    background: #1e2139;
+    border-radius: 0.63rem;
+    padding: 1.56rem 0.94rem;
+
+    .containerOn {
+      @include flexCenter(space-between);
+      flex-wrap: wrap;
+
+      div:first-child {
+        color: $whiteColorTwo;
+
+        & :first-child {
+          @include flexCenter(initial);
+          font-size: clamp(1rem, 4vw, 1.25rem);
+        }
+
+        p {
+          font-size: 0.81rem;
+        }
+      }
+
+      div:last-child {
+        @media screen and (max-width: 360px) {
+          margin-top: 8px;
+        }
+        p {
+          font-size: 0.81rem;
+          color: $whiteColorTwo;
+          text-align: right;
+
+          @media screen and (max-width: 360px) {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .containerTwo {
+      @include flexCenter(space-between);
+      flex-wrap: wrap;
+      margin-top: 20px;
+
+      .infotwo {
+        @include flexCenter(initial);
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+
+        div:nth-child(1) {
+          color: $whiteColorTwo;
+
+          & :first-child {
+            font-size: 0.81rem;
+          }
+
+          & :last-child {
+            font-size: 1.13rem;
+            font-weight: 700;
+          }
+        }
+
+        div:nth-child(2) {
+          color: $whiteColorTwo;
+
+          & :first-child {
+            font-size: 0.81rem;
+          }
+
+          & :last-child {
+            font-size: 1.13rem;
+            font-weight: 700;
+          }
+        }
+      }
+      .infothree {
+        color: $whiteColorTwo;
+
+        & :first-child {
+          font-size: 0.81rem;
+
+          @media screen and (max-width: 320px) {
+            margin-top: 12px;
+          }
+        }
+
+        & :nth-child(2) {
+          font-size: 1.13rem;
+          font-weight: 700;
+        }
+
+        .infop {
+          font-size: 0.81rem;
+        }
+      }
+      .infofour {
+        color: $whiteColorTwo;
+
+        & :first-child {
+          font-size: 0.81rem;
+
+          @media screen and (max-width: 320px) {
+            margin-top: 12px;
+          }
+        }
+
+        & :last-child {
+          font-size: 1.13rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .containerPayment {
+    background-color: #252945;
+    margin-top: 20px;
+    border-radius: 0.63rem;
+
+    .wrapperPayment {
+      @include flexCenter(space-between);
+      padding: 1.25rem;
+
+      .quanty {
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
+      }
+      .contPrice {
+        @media screen and (max-width: 480px) {
+          display: none;
+        }
+      }
+
+      div {
+        @include flexCenter(initial);
+        flex-direction: column;
+
+        & :last-child {
+          font-size: 0.94rem;
+          font-weight: 700;
+          margin-top: 15px;
+        }
+      }
+
+      p {
+        font-size: 0.81rem;
+        color: $whiteColorTwo;
+      }
+    }
+
+    .containerPrice {
+      @include flexCenter(space-between);
+      background-color: #0c0e16;
+      color: $whiteColorTwo;
+      padding: 1.25rem;
+      width: 100%;
+      border-radius: 0 0 0.63rem 0.63rem;
+
+      span {
+        font-size: clamp(1.13rem, 4vw, 1.5rem);
+        font-weight: 700;
       }
     }
   }

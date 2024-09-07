@@ -13,7 +13,7 @@ $whiteColorTwo: #dfe3fa;
   padding: 0.9375rem;
 
   .backButton {
-    max-width: 50rem;
+    max-width: 53.13rem;
     margin: 0 auto 20px auto;
 
     a {
@@ -21,7 +21,7 @@ $whiteColorTwo: #dfe3fa;
       color: $whiteColorOn;
       text-decoration: none;
       @include flexCenter(initial);
-      gap: 5px;
+      gap: 0.3125rem;
       max-width: 7.5rem;
       transition: 0.3s;
 
@@ -36,7 +36,7 @@ $whiteColorTwo: #dfe3fa;
     color: $whiteColorOn;
     background: #1e2139;
     padding: 1.56rem 0.94rem;
-    max-width: 50rem;
+    max-width: 53.13rem;
     margin: 0 auto;
     border-radius: 0.63rem;
 
@@ -104,7 +104,7 @@ $whiteColorTwo: #dfe3fa;
   }
 
   .info {
-    max-width: 50rem;
+    max-width: 53.13rem;
     margin: 20px auto auto;
     background: #1e2139;
     border-radius: 0.63rem;

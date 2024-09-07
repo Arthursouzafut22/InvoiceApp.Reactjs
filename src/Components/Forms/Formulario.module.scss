@@ -1,0 +1,212 @@
+$whiteColorOn: #ffffff;
+$whiteColorTwo: #dfe3fa;
+
+.section {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.538);
+  z-index: 400;
+  box-sizing: border-box;
+
+  .form {
+    padding: 25px;
+    max-width: 600px;
+    width: 100%;
+    background: #141625;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 40;
+    height: 100%;
+    animation: animeForm 0.5s forwards;
+
+    .noAnime {
+      animation: noAnimeForm 0.5s forwards;
+    }
+
+    @media screen and (max-width: 481px) {
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: $whiteColorTwo;
+      padding-left: 8px;
+    }
+
+    .scroll {
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      height: 600px;
+      padding: 0px 10px;
+    }
+
+    fieldset {
+      border: none;
+      legend {
+        font-size: 15px;
+        color: #7c5dfa;
+        margin-bottom: 10px;
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+
+        @media screen and (max-width: 481px) {
+          flex-wrap: wrap;
+          div {
+            width: 100%;
+          }
+        }
+
+        div {
+          max-width: 100%;
+        }
+      }
+
+      .wrapper2 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        // justify-content: center;
+        gap: 15px;
+        // border: 1px solid blueviolet;
+        // background-color: #7c5dfa;
+
+        @media screen and (max-width: 460px) {
+          flex-wrap: wrap !important;
+
+          div {
+            width: 100%;
+            flex: initial;
+          }
+        }
+
+        div {
+          width: 100%;
+        }
+
+        select {
+          font-size: 15px;
+          padding: 12px;
+          color: #ffffff;
+          background-color: #1e2139;
+          border-radius: 8px;
+          border: none;
+          outline: none;
+          width: 100%;
+          margin-bottom: 10px;
+          outline: 1px solid transparent;
+          transition: outline 0.4s ease;
+          cursor: pointer;
+
+          &:focus {
+            outline: 1px solid #7c5dfa;
+          }
+        }
+      }
+    }
+
+    .wrapperTotal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      color: $whiteColorTwo;
+
+      span {
+        display: block;
+        color: "#777F98";
+      }
+    }
+
+    .button {
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #dfe3fa;
+      background-color: #1e2139;
+      gap: 5px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+      outline: 1px solid transparent;
+      transition: outline 0.4s ease;
+
+      &:hover {
+        outline: 1px solid #7c5dfa;
+      }
+    }
+
+    .wrapperbutton {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 15px;
+
+      .btnOn {
+        background-color: #1e2139;
+
+        &:hover {
+          background-color: $whiteColorOn;
+        }
+      }
+
+      button {
+        font-weight: 600;
+        color: #dfe3fa;
+        display: block;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-radius: 1.38rem;
+        border: none;
+        transition: 0.5s;
+      }
+
+      .wrapp2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .btnTwo {
+          background: #363b53;
+
+          &:hover {
+            background-color: #1e2139;
+          }
+        }
+
+        .btnThree {
+          background: #9277ff;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animeForm {
+  from {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}

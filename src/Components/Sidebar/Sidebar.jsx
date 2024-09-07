@@ -1,5 +1,5 @@
 import styles from "./Sidebar.module.scss";
-import logo from "../../Assets/imagens/loop-removebg-preview.png";
+import logo from "../../Assets/imagens/lp-removebg-preview.png";
 import img from "../../Assets/imagens/image-attribution.jpg";
 import { FaSun } from "react-icons/fa";
 import { FaMoon } from "react-icons/fa6";
